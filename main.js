@@ -659,6 +659,27 @@ function getCurrentPage() {
   return parts[parts.length - 1] || "index.html";
 }
 
+function applyActiveNav() {
+  const page = getCurrentPage();
+  const navLinks = document.querySelectorAll("#nav a");
+  const pageToHref = {
+    "index.html": "index.html",
+    "preise.html": "preise.html",
+    "ueber-uns.html": "ueber-uns.html",
+    "blog.html": "blog.html",
+    "kontakt.html": "kontakt.html",
+    "impressum.html": "impressum.html",
+    "datenschutz.html": "datenschutz.html",
+    "agb.html": "agb.html",
+    "404.html": ""
+  };
+  const activeHref = pageToHref[page] ?? "";
+  navLinks.forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    link.classList.toggle("is-active", href === activeHref);
+  });
+}
+
 function getLanguage() {
   const stored = window.localStorage.getItem("siteLanguage");
   if (supportedLanguages.includes(stored)) return stored;
@@ -841,6 +862,7 @@ function renderDynamicContent(language) {
 function applyTranslations(language) {
   applyStaticTranslations(language);
   renderDynamicContent(language);
+  applyActiveNav();
 }
 
 const langSwitcher = document.getElementById("langSwitcher");
