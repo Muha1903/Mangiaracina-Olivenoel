@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontakt | Mangiaracina Import</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body data-page="contact">
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html"><span class="brand__mark"></span><span class="brand__text">Mangiaracina Import</span></a>
+      <div class="header__controls">
+        <label class="langSelectWrap" for="langSwitcher">
+          <span class="srOnly" data-i18n="common.language_label">Sprache wÃ¤hlen</span>
+          <select id="langSwitcher" class="langSwitcher" aria-label="Sprache wÃ¤hlen"></select>
+        </label>
+        <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span><span class="srOnly" data-i18n="common.nav_toggle">MenÃ¼ Ã¶ffnen</span></button>
+                        <nav class="nav" id="nav">
+          <a href="index.html" data-i18n="common.nav_home">Start</a>
+          <a href="preise.html" data-i18n="common.nav_products">Produkte & Preise</a>
+          <a href="ueber-uns.html" data-i18n="common.nav_about">Über uns</a>
+          <a href="blog.html" data-i18n="common.nav_blog">Blog</a>
+          <a href="impressum.html" data-i18n="common.footer_imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="common.footer_privacy">Datenschutz</a>
+          <a href="agb.html" data-i18n="common.footer_terms">AGB</a>
+          <a class="nav__cta" href="kontakt.html" data-i18n="common.nav_contact">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="pageHero">
+      <div class="container">
+        <h1 data-i18n="contact.hero_title">Kontakt und Bestellung</h1>
+        <p data-i18n="contact.hero_text">Wir beraten dich gerne zu Mengen, Versand und Lieferterminen.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container split">
+        <article class="card">
+          <h2 data-i18n="contact.direct_title">Direkter Kontakt</h2>
+          <div class="contact">
+            <div><strong data-i18n="contact.company_label">Firma:</strong> Mangiaracina Import</div>
+            <div><strong data-i18n="contact.person_label">Ansprechperson:</strong> Nunzio Mangiaracina</div>
+            <div><strong data-i18n="contact.address_label">Adresse:</strong> LangÃ¤ckerstrasse 15, 8957 Spreitenbach</div>
+            <div><strong data-i18n="common.contact_email_label">E-Mail:</strong> <a href="mailto:nunzio@mangiaracina.ch">nunzio@mangiaracina.ch</a></div>
+            <div><strong data-i18n="common.contact_phone_label">Telefon:</strong> <a href="tel:+41564020691">+41 56 402 06 91</a></div>
+            <div><strong data-i18n="contact.mobile_label">Mobile:</strong> <a href="tel:+41792430262">+41 79 243 02 62</a></div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2 data-i18n="contact.form_title">Bestellanfrage</h2>
+          <form class="form" id="contactForm">
+            <div class="form__row">
+              <label><span data-i18n="common.form_name">Name</span><input required name="name" data-i18n-placeholder="common.form_name_placeholder" placeholder="Vorname Nachname"></label>
+              <label><span data-i18n="common.form_email">E-Mail</span><input required type="email" name="email" data-i18n-placeholder="common.form_email_placeholder" placeholder="name@mail.ch"></label>
+            </div>
+            <label><span data-i18n="common.form_product">Produkt</span>
+              <select name="topic" id="productSelect"></select>
+            </label>
+            <label><span data-i18n="common.form_message">Nachricht</span><textarea required name="message" rows="4" data-i18n-placeholder="common.form_message_placeholder" placeholder="Menge, Adresse, Wunschdatum"></textarea></label>
+            <button class="btn btn--primary btn--full" type="submit" data-i18n="common.form_submit">Bestellanfrage senden</button>
+            <p class="fineprint" id="formNote"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="contact.faq_title">HÃ¤ufige Fragen</h2>
+          <p class="muted" data-i18n="contact.faq_text">Antworten zu Bestellung, Versand und ProduktqualitÃ¤t.</p>
+        </div>
+        <div class="faq" id="faqList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> Mangiaracina Import</p>
+      <p><a href="impressum.html" data-i18n="common.footer_imprint">Impressum</a> · <a href="datenschutz.html" data-i18n="common.footer_privacy">Datenschutz</a> · <a href="agb.html" data-i18n="common.footer_terms">AGB</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
