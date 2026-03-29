@@ -1,0 +1,144 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mangiaracina Import | Extra Vergine Olivenöl</title>
+  <meta name="description" content="Extra Vergine Olivenöl aus Sizilien, direkt importiert in die Schweiz." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="main.js"></script>
+</head>
+<body data-page="index">
+  <a class="skip" href="#content">Zum Inhalt springen</a>
+
+  <header class="header">
+    <div class="container header__row">
+      <a class="brand" href="index.html" aria-label="Startseite">
+        <span class="brand__mark" aria-hidden="true"></span>
+        <span class="brand__text">Mangiaracina Import</span>
+      </a>
+
+      <div class="header__controls">
+        <label class="langSelectWrap" for="langSwitcher">
+          <span class="srOnly">Sprache wählen</span>
+          <select id="langSwitcher" class="langSwitcher" aria-label="Sprache wählen"></select>
+        </label>
+
+        <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+          <span class="srOnly" data-i18n="common.nav_toggle">Menü öffnen</span>
+        </button>
+
+                        <nav class="nav" id="nav">
+          <a href="index.html" data-i18n="common.nav_home">Start</a>
+          <a href="preise.html" data-i18n="common.nav_products">Produkte & Preise</a>
+          <a href="ueber-uns.html" data-i18n="common.nav_about">Über uns</a>
+          <a href="blog.html" data-i18n="common.nav_blog">Blog</a>
+          <a href="impressum.html" data-i18n="common.footer_imprint">Impressum</a>
+          <a href="datenschutz.html" data-i18n="common.footer_privacy">Datenschutz</a>
+          <a href="agb.html" data-i18n="common.footer_terms">AGB</a>
+          <a class="nav__cta" href="kontakt.html" data-i18n="common.nav_contact">Kontakt</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <p class="schoolBanner">Schulprojekt: Diese Website ist eine Demo und wird produktiv nicht eingesetzt.</p>
+          <p class="badge" data-i18n-html="index.hero_badge"><span class="dot" aria-hidden="true"></span>Extra Vergine Olivenöl · Nocellara del Belice · Import seit 2005</p>
+          <h1 data-i18n-html="index.hero_title">Olivenöl aus Sizilien -<br><span class="gradientText">direkt zu dir nach Hause.</span></h1>
+          <p class="lead" data-i18n="index.hero_text">Mangiaracina Import ist ein Familienunternehmen aus Spreitenbach. Wir liefern hochwertiges, kaltgepresstes Olivenöl in Glasflaschen und Kanistern.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="preise.html" data-i18n="index.hero_cta_primary">Jetzt bestellen</a>
+            <a class="btn btn--soft" href="preise.html" data-i18n="index.hero_cta_secondary">Produkte & Preise</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <div class="stat__num" data-i18n="index.stat_1_num">Seit 2005</div>
+              <div class="stat__label" data-i18n="index.stat_1_label">Produktion, Import und Verkauf</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" data-i18n="index.stat_2_num">Säure unter 0.2%</div>
+              <div class="stat__label" data-i18n="index.stat_2_label">kaltgepresst und naturrein</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" data-i18n="index.stat_3_num">Handernte</div>
+              <div class="stat__label" data-i18n="index.stat_3_label">Nocellara del Belice</div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__card card">
+          <div class="card__top">
+            <h2 class="h3" data-i18n="index.quick_title">Schnellbestellung</h2>
+            <p class="muted" data-i18n="index.quick_text">Antwort in der Regel innerhalb von 24h.</p>
+          </div>
+
+          <form class="form" id="contactForm">
+            <div class="form__row">
+              <label><span data-i18n="common.form_name">Name</span><input required name="name" autocomplete="name" data-i18n-placeholder="common.form_name_placeholder" placeholder="Vorname Nachname"></label>
+              <label><span data-i18n="common.form_email">E-Mail</span><input required type="email" name="email" autocomplete="email" data-i18n-placeholder="common.form_email_placeholder" placeholder="name@mail.ch"></label>
+            </div>
+            <label><span data-i18n="common.form_product">Produkt</span>
+              <select name="topic" id="productSelect"></select>
+            </label>
+            <label><span data-i18n="common.form_message">Nachricht</span><textarea required name="message" rows="4" data-i18n-placeholder="common.form_message_placeholder" placeholder="Menge, Lieferadresse, Wunschdatum."></textarea></label>
+            <label class="check"><input required type="checkbox"><span data-i18n-html="common.form_privacy">Ich habe die <a href="datenschutz.html">Datenschutzerklärung</a> gelesen.</span></label>
+            <button class="btn btn--primary btn--full" type="submit" data-i18n="common.form_submit">Bestellanfrage senden</button>
+            <p class="fineprint" id="formNote"></p>
+          </form>
+
+          <div class="miniContact">
+            <div><strong data-i18n="common.contact_email_label">E-Mail:</strong> <a href="mailto:nunzio@mangiaracina.ch">nunzio@mangiaracina.ch</a></div>
+            <div><strong data-i18n="common.contact_phone_label">Telefon:</strong> <a href="tel:+41792430262">+41 79 243 02 62</a></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64 C240,120 480,8 720,56 C960,104 1200,24 1440,72 L1440,120 L0,120 Z"></path></svg>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="index.news_title">Aktuelles</h2>
+          <p class="muted" data-i18n="index.news_text">Ernte, Liefertermine und saisonale Hinweise.</p>
+        </div>
+        <div class="grid2" id="newsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2 data-i18n="index.chapter_title">Kapitel entdecken</h2>
+          <p class="muted" data-i18n="index.chapter_text">Die Inhalte sind auf eigene Seiten verteilt, damit die Website klarer und schneller navigierbar bleibt.</p>
+        </div>
+        <div class="chapterGrid" id="chapterGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> Mangiaracina Import</p>
+      <p><a href="impressum.html" data-i18n="common.footer_imprint">Impressum</a> · <a href="datenschutz.html" data-i18n="common.footer_privacy">Datenschutz</a> · <a href="agb.html" data-i18n="common.footer_terms">AGB</a> · <a href="blog.html" data-i18n="common.footer_blog">Blog</a></p>
+    </div>
+  </footer>
+</body>
+</html>
+
+
+
